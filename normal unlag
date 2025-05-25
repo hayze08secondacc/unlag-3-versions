@@ -1,0 +1,11 @@
+for _, v in pairs(workspace:GetDescendants()) do
+    if v:IsA("Texture") or v:IsA("Decal") then
+        v.Transparency = 1
+    elseif v:IsA("ParticleEmitter") or v:IsA("Trail") then
+        v.Enabled = false
+    end
+end
+game.Lighting.GlobalShadows = false
+game.Lighting.FogEnd = 100000
+game.Lighting.Brightness = 1
+settings().Rendering.QualityLevel = Enum.QualityLevel.Level01
