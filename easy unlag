@@ -1,0 +1,7 @@
+for _, v in pairs(workspace:GetDescendants()) do
+    if v:IsA("Texture") or v:IsA("Decal") then
+        v.Transparency = 1
+    end
+end
+game.Lighting.GlobalShadows = false
+game.Lighting.FogEnd = 100000
